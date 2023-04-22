@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root{
+    --dorado1--: rgb(96, 53, 18);
+    --dorado2--: rgb(200, 150, 41);
+    --dorado3--: rgb(250, 242, 144);
+    --negromate--: #0000;
+    --negro1--: #020403;
+    --negro2--: #212121;
+    --complemento--: #D3d3d3;
+    --blanco: #ffff;
+    --rojo: red;
+    --transparente-gris: rgba(255,255,255, 0.20);
+    --fuente: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: var(--fuente);
+}
+
+/* Codigo */
+header{
+    height: 15vh;
+    width: 100vw;
+    /*background-image: url(https://cadenaser00.epimg.net/programa/imagenes/2016/10/24/la_script/1477303128_773178_1477304576_noticia_normal.jpg);
+    background-size: cover; */
+    background-color: #1C1C1C;
+}
+
+.navbar{
+ position: absolute;
+ padding: 50px;
+ display: flex;
+ justify-content: space-between;
+ width: 100%;
+ box-sizing: border-box;
+ align-items: center;
+}
+
+.navbar a{
+    color: var(--blanco);
+}
+
+.navbar .logo{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo{
+  top: -10px;
+}
+
+.navbar .nav-links ul{
+ display: flex;
+
+}
+
+.navbar .nav-links ul li{
+    margin: 0 25px;
+    font-size: 1.5em;
+}
+
+.navbar .nav-links ul li.active a{
+ color: var(--rojo);
+ font-weight: 100;
+}
+
+.navbar .menu-hamburger{
+ display: none;
+ position: absolute;
+ top: 50px;
+ right: 30px;
+ width: 35px;
+
+}
+
+.menu-hamburger{
+    cursor: pointer;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+
+ .navbar{
+    padding: 0;
+ }
+
+ .navbar .logo{
+  position: absolute;
+  top: 45px;
+  left: 30px;
+}
+
+ .navbar .menu-hamburger{
+  display: block;
+ }
+
+ .nav-links{
+   top: 0;
+   left: 0;
+   position: absolute;
+   background-color:#1C1C1C;
+  /* backdrop-filter: blur(70px);*/
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: -100%;
+   transition: all 0.5s ease;
+ }
+
+ .nav-links ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .nav-links.mobile-menu{
+    margin-left: 0;
+
+}
+
+ .navbar .nav-links ul li{
+    margin: 25px 0;
+    font-size: 1.5em;
+}
+}
