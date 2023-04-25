@@ -9,12 +9,19 @@
     <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
     <link rel="preload" href="{{asset('css/welcome.css')}}">
     <link rel="stylesheet" href="{{asset('css/welcome.css')}}">
+    <link rel="preload" href="{{asset('css/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/swiper-bundle.min.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5b41b5f095.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
+    <main>
   <header>
     <nav class="navbar">
-        <a href="#" class="logo">Logo</a>
+        <a class="logo" href="#"><img class="logotipo" src="{{asset('img/CineVerse.png')}}" alt="logo"></a>
         <div class="nav-links">
           <ul>
              <li class="active"><a href="#">Home</a></li>
@@ -26,7 +33,197 @@
         </div>
         <img src="{{asset('img/menu-btn.png')}}" alt="icono de menu" class="menu-hamburger">
       </nav>
+
+
+      <!-- Slider -->
+      <!-- Slider -->
+      <div class="contenedor">
+          <div class="slider-container active">
+              <div class="slide">
+              <div class="content text">
+                <h3>Hola </h3>
+
+                <p>La mejor opción en entretenimiento ha llegado</p>
+
+                <a href="{{route('register')}}" class="btn">Unirme</a>
+
+                <video src="{{asset('video/video1.mp4')}}" muted autoplay loop></video>
+              </div>
+              </div>
+          </div>
+
+
+          <div class="slider-container">
+          <div class="slide">
+              <div class="content text">
+                <h3>John Wick 4</h3>
+
+                <p>Una exploración de las aventuras, las desgarradoras experiencias y las hazañas del legendario asesino a sueldo, John Wick.                    </p>
+
+                <a href="{{route('register')}}" class="btn">Adquirir boletos</a>
+
+                <video src="{{asset('video/movie1.mp4')}}" muted autoplay loop></video>
+              </div>
+              </div>
+          </div>
+
+
+
+          <div class="slider-container">
+          <div class="slide">
+              <div class="content text">
+                <h3>Super Mario Bros</h3>
+
+                <p>La pelicula cuenta la historia de Mario y Luigi, dos hermanos que viajan a un mundo oculto para rescatar a la Princesa Peach, capturada por el malvado Rey Bowser.                    </p>
+
+                <a href="{{route('register')}}" class="btn">Adquirir Boletos</a>
+
+                <video src="{{asset('video/movie2.mp4')}}" muted autoplay loop></video>
+              </div>
+              </div>
+          </div>
+
+
+
+          <div class="slider-container">
+          <div class="slide">
+              <div class="content text">
+                <h3>Contáctanos</h3>
+
+                <p>Vive la mejor experiencia en cines solamente uniendote</p>
+
+                <a href="{{route('register')}}" class="btn">Registrarme</a>
+
+                <video src="{{asset('video/video2.mp4')}}" muted autoplay loop></video>
+              </div>
+              </div>
+          </div>
+
+          <div id="next" onclick="next()"> > </div>
+          <div id="prev" onclick="prev()"> < </div>
+
+      </div>
   </header>
+    </main>
+
+    <div class="slide-container swiper">
+        <div class="slide-content">
+          <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+                <div class="card-image">
+                  <img src="{{asset('img/profiles/profile1.jpg')}}" alt="" class="card-img" />
+                </div>
+              </div>
+
+              <div class="card-content">
+                <h2 class="name">Rafael Castro</h2>
+                <p class="description">
+                    Ofrece una experiencia de compra satisfactoria y sin complicaciones.
+                </p>
+
+                <button class="button">Ver Más</button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+                <div class="card-image">
+                  <img src="{{asset('img/profiles/profile2.jpg')}}" alt="" class="card-img" />
+                </div>
+              </div>
+
+              <div class="card-content">
+                <h2 class="name">Ana Castro</h2>
+                <p class="description">
+                    El sistema es intuitivo y facil de usar sin tener que hacer fila durante horas.
+                </p>
+
+                <button class="button">Ver Más</button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+                <div class="card-image">
+                  <img src="{{asset('img/profiles/profile3.jpg')}}" alt="" class="card-img" />
+                </div>
+              </div>
+
+              <div class="card-content">
+                <h2 class="name">Juan López</h2>
+                <p class="description">
+                    En lugar de hacer filas, puedo comprar de forma rápida.
+                </p>
+
+                <button class="button">Ver Más</button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+                <div class="card-image">
+                  <img src="{{asset('img/profiles/profile4.jpg')}}" alt="" class="card-img" />
+                </div>
+              </div>
+
+              <div class="card-content">
+                <h2 class="name">Marisol Rivera</h2>
+                <p class="description">
+                    Un servicio nada comparado a la competencia.
+                </p>
+
+                <button class="button">Ver Más</button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+                <div class="card-image">
+                  <img src="{{asset('img/profiles/profile5.jpg')}}" alt="" class="card-img" />
+                </div>
+              </div>
+
+              <div class="card-content">
+                <h2 class="name">Rosa González</h2>
+                <p class="description">
+                    Proporciona una variedad de películas en función sin importar que sean recientes.
+                </p>
+
+                <button class="button">Ver Más</button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+                <div class="card-image">
+                  <img src="{{asset('img/profiles/profile6.jpg')}}" alt="" class="card-img" />
+                </div>
+              </div>
+
+              <div class="card-content">
+                <h2 class="name">José Ramírez</h2>
+                <p class="description">
+                    Me evite largas filas y disfrute de mi pelicula favorita.
+                </p>
+
+                <button class="button">Ver Más</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next swipper-navBtn"></div>
+        <div class="swiper-button-prev swipper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+      </div>
 
   <footer>
     <div class="container">
@@ -78,5 +275,11 @@
     <p>Copyright © 2023 CineVerse. Derechos Reservados</p>
   </div>
   <script src="{{asset('js/menu.js')}}" type="text/javascript"></script>
+  <script src="{{asset('js/slider.js')}}" type="text/javascript"></script>
+   <!-- Swiper JS -->
+   <script src="{{asset('js/swiper-bundle.min.js')}}" type="text/javascript"></script>
+
+   <!-- JavaScript -->
+   <script src="{{asset('js/script.js')}}" text="text/javascript"></script>
 </body>
 </html>
