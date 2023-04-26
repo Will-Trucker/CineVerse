@@ -55,6 +55,9 @@ header{
     height: 140px; /* altura deseada del navbar */
     background-color: #333; /* color de fondo deseado */
     padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
 }
 
 .navbar a{
@@ -67,12 +70,12 @@ header{
 }*/
 
 .logo {
-    width: 170px; /* ancho deseado del logotipo */
+    width: 240px; /* ancho deseado del logotipo */
     height: 130px; /* altura deseada del logotipo */
     margin-right: 20px; /* margen derecho para separarlo de los enlaces */
   }
 
-  .logotipo {
+  .logotipo{
     width: 100%;
     height: 100%;
   }
@@ -143,7 +146,7 @@ header{
   }
 
   .contenedor .slider-container .slide .content{
-    min-height: 89vh;
+    min-height: 95vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -152,7 +155,7 @@ header{
     background: rgba(23, 22, 22, 0.735);
     color: var(--blanco);
     text-align: center;
-
+    margin-top: 3rem;
   }
 
   .contenedor .slider-container .slide .content h3{
@@ -260,12 +263,222 @@ header{
 
    }*/
 
+
+   /* carrousel cartelera */
+   /* PRODUCTS */
+.SectionCarrusel{
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    width: 90%;
+    margin-left: 4%;
+    /*margin-top: 20%;*/
+    display: flex;
+    justify-content: center;
+  }
+
+  .SectionCarrusel-Contenedor{
+    width: 1145px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 550px;
+    margin-left: 7%;
+
+  }
+
+  .SectionCarrusel-Contenedor::-webkit-scrollbar {
+    display: none;
+  }
+
+  .CartaCarrusel{
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin:18.5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .card1{
+    margin-right: 1%;
+  }
+  .CartaImagen{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 5% 5% 0% 0%;
+  }
+
+  .product-thumb {
+    width: 60%;
+    object-fit:unset;
+  }
+
+  .discount-tag {
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff7d7d;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+  }
+
+  .card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  .BotonesCarrusel{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-card:hover .card-btn {
+    opacity: 1;
+  }
+
+  .card-btn:hover {
+    background: #ff7d7d;
+    color: #fff;
+  }
+
+  .SectionCarrusel-informacion{
+    width: 100%;
+    height: 100px;
+    margin-top: -10%;
+  }
+
+  .CarruselTitulo{
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-top: -20%;
+    text-align: center;
+  }
+
+  /*.product-short-description {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+  }*/
+
+  .price {
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    margin-left: -8px;
+    color: red;
+  }
+
+  .title-carro{
+    margin-top: -40%;
+  }
+
+  .actual-price {
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+  }
+
+  .pre-btn,
+  .nxt-btn {
+    border: none;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 100%;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  }
+
+  .pre-btn {
+    /*left: 5%;*/
+    transform: rotate(180deg);
+    font-size: 4rem;
+  }
+
+  .nxt-btn {
+    right: 6%;
+    font-size: 4rem;
+  }
+
+  .pre-btn img,
+  .nxt-btn img {
+    opacity: 0.2;
+  }
+
+  .pre-btn:hover img,
+  .nxt-btn:hover img {
+    opacity: 1;
+  }
+
+  .collection-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+
+  .collection {
+    position: relative;
+  }
+
+  .collection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .collection p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    text-transform: capitalize;
+  }
+
+  .collection:nth-child(3) {
+    grid-column: span 2;
+    margin-bottom: 10px;
+  }
+
    /* Testimonios */
    .slide-container{
     max-width: 1120px;
     width: 100%;
     padding: 40px 0;
-    min-height: 100vh;
+    min-height: 120vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -379,12 +592,24 @@ header{
   .swiper-pagination-bullet-active{
     background-color: #805f04;
   }
+  .slide-content__title{
+    text-align: center;
+    color: #fff;
+  }
+  .slide-content hr{
+    border: 5px solid var(--dorado3--);
+    margin-top: -1rem;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 
   @media screen and (max-width: 768px) {
     .slide-content{
       margin: 0 10px;
     }
-    .swiper-navBtn{
+    .swiper-button-next, .swiper-button-prev {
       display: none;
     }
   }
@@ -560,35 +785,80 @@ footer p{
 }
 }
 
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+@media screen and (max-width: 900px) {
+
+
+
+ .navbar{
+    padding: 0;
+    position:fixed;
+    z-index: 4;
+    width: 100%;
+ }
+
+
+ .navbar .logo{
+  position: absolute;
+  top: 95px;
+  left: 30px;
+  margin-top: -5.5rem;
+}
+
+.logo {
+    width: 220px; /* ancho deseado del logotipo */
+    height: 130px; /* altura deseada del logotipo */
+    margin-right: 20px; /* margen derecho para separarlo de los enlaces */
   }
 
-
-
-  .nav-links {
-    display: none; /* ocultar los enlaces en pantallas pequeñas */
-  }
-
-  .menu-hamburger {
-    display: block; /* mostrar el icono del menú en pantallas pequeñas */
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
-
-  .menu-hamburger img {
+  .logotipo{
     width: 100%;
     height: 100%;
   }
 
-  .enlace-resp {
-    display: block;
-    margin-bottom: 10px;
-  }
+
+ .navbar .menu-hamburger{
+  display: block;
+ }
+
+ .menu-hamburger{
+    z-index: 4;
+    position: absolute;
+ }
+
+
+ .nav-links{
+   top: 0;
+   left: 0;
+   background-color:#1C1C1C;
+  /* backdrop-filter: blur(70px);*/
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: -100%;
+   transition: all 0.5s ease;
+   z-index: 2;
+   position: fixed;
+ }
+
+ .nav-links ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .nav-links.mobile-menu{
+    margin-left: 0;
+
 }
+
+ .navbar .nav-links ul li{
+    margin: 25px 0;
+    font-size: 1.5em;
+}
+}
+
 
 @media screen and (width:768px) {
   header{

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>| CineVerse</title>
+    <link rel="icon" href="{{asset('img/icono.png')}}">
     <link rel="preload" href="{{asset('css/normalize.css')}}">
     <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
     <link rel="preload" href="{{asset('css/welcome.css')}}">
@@ -14,14 +15,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <script src="https://kit.fontawesome.com/5b41b5f095.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
     <main>
   <header>
     <nav class="navbar">
-        <a class="logo" href="#"><img class="logotipo" src="{{asset('img/CineVerse.png')}}" alt="logo"></a>
+        <a class="logo" href="#"><img class="logotipo" src="{{asset('img/Logo1.webp')}}" alt="logo"></a>
         <div class="nav-links">
           <ul>
              <li class="active"><a href="#">Home</a></li>
@@ -106,8 +107,81 @@
   </header>
     </main>
 
+   <!-- Carrusel -->
+   <section class="ofertas">
+    <h1>CARTELERA</h1>
+    <hr>
+</section>
+<section class="SectionCarrusel">
+  <div class="BotonesCarrusel">
+        <button class="pre-btn"><img src="images/arrow.png" alt="">></button>
+        <button class="nxt-btn"><img src="images/arrow.png" alt="">></button>
+  </div>
+        <div class="SectionCarrusel-Contenedor">
+            <div class="CartaCarrusel">
+                <div class="CartaImagen">
+
+                    <img src="https://posterspy.com/wp-content/uploads/2022/01/Avatar-The-Way-Of-Water.jpg" class="movie-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion">
+
+                    <h3 class="CarruselTitulo">  <a href="{{route('register')}}">Ir</a></h3>
+                    <span class="title">Avatar - El Camino del Agua</span>
+
+                </div>
+            </div>
+            <div class="CartaCarrusel">
+                <div class="CartaImagen">
+
+                    <img src="" class="movie-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion">
+                    <h3 class="CarruselTitulo">Intel Core i5-12600K</h3>
+                    <span class="price">$215.74</span>
+                </div>
+            </div>
+            <div class="CartaCarrusel">
+                <div class="CartaImagen">
+
+                    <img src="https://i0.wp.com/dealtargets.com/wp-content/uploads/2022/01/61nVSWwdfqL._AC_SL1500_.jpg?fit=1500%2C877&ssl=1" class="product-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion">
+                    <h3 class="CarruselTitulo">Kingston Fury Beast</h2>
+                    <span class="price">$254.00</span>
+                </div>
+            </div>
+            <div class="CartaCarrusel">
+                <div class="CartaImagen">
+
+                    <img src="https://m.media-amazon.com/images/I/91H4pNDrHJL._AC_SL1500_.jpg" class="product-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion">
+                    <h3 class="title-carro">Corsair Dominator Platinium RGB DDR4</h3>
+                    <span class="price">$339.99</span>
+                </div>
+            </div>
+            <div class="CartaCarrusel">
+                <div class="CartaImagen">
+
+                    <img src="https://cdn.cs.1worldsync.com/syndication/feeds/wd/inline-content/C4/2244F7EA61586C5A4BC96484A8EF88D466977ECE_MYPASSPORT4TB5TBBLACKHERO_w_400_hero.png" class="product-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion">
+                    <h3 class="CarruselTitulo">WD My Passport - Disco Duro Portátil, 5TB</h3>
+                    <span class="price">$61.99</span>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="{{asset('js/Carrousel.js')}}"></script>
+
     <div class="slide-container swiper">
         <div class="slide-content">
+            <h1 class="slide-content__title">Testimonios</h1>
+            <hr>
+            <br>
           <div class="card-wrapper swiper-wrapper">
             <div class="card swiper-slide">
               <div class="image-content">
@@ -139,7 +213,7 @@
               <div class="card-content">
                 <h2 class="name">Ana Castro</h2>
                 <p class="description">
-                    El sistema es intuitivo y facil de usar sin tener que hacer fila durante horas.
+                    El sistema es facil de usar sin tener que hacer fila.
                 </p>
 
                 <button class="button">Ver Más</button>
@@ -193,7 +267,7 @@
               <div class="card-content">
                 <h2 class="name">Rosa González</h2>
                 <p class="description">
-                    Proporciona una variedad de películas en función sin importar que sean recientes.
+                    Proporciona una variedad de películas en función.
                 </p>
 
                 <button class="button">Ver Más</button>
@@ -278,7 +352,8 @@
   <script src="{{asset('js/slider.js')}}" type="text/javascript"></script>
    <!-- Swiper JS -->
    <script src="{{asset('js/swiper-bundle.min.js')}}" type="text/javascript"></script>
-
+   <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+   <script src="{{asset('js/carrousel.js')}}"></script>
    <!-- JavaScript -->
    <script src="{{asset('js/script.js')}}" text="text/javascript"></script>
 </body>
