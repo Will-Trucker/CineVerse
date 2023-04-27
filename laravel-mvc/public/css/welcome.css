@@ -265,16 +265,85 @@ header{
 
 
    /* carrousel cartelera */
-   /* PRODUCTS */
+
 .SectionCarrusel{
     position: relative;
     overflow: hidden;
     padding: 20px;
     width: 90%;
-    margin-left: 4%;
-    /*margin-top: 20%;*/
+    margin-left: 2%;
+    margin-top: 2%;
     display: flex;
     justify-content: center;
+  }
+
+  .SectionCarrusel2{
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    width: 90%;
+    margin-left: 2%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ofertas{
+    margin-top: 50%;
+    text-align: center;
+    color: var(--blanco);
+  }
+
+   .ofertas hr{
+   border: solid 4px var(--dorado3--);
+   width: 5%;
+   margin: 20px auto;
+   max-width: 90%;
+   margin-top: -1rem;
+  }
+
+
+  .ofertas2{
+    margin-top: 1%;
+    text-align: center;
+    color: var(--blanco);
+  }
+
+   .ofertas2 hr{
+   border: solid 4px var(--dorado3--);
+   width: 5%;
+   margin: 20px auto;
+   max-width: 90%;
+   margin-top: -1rem;
+  }
+
+
+  .SectionCarrusel-Contenedor2{
+    width: 1145px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 550px;
+    margin-left: 7%;
+    overflow: hidden;
+  }
+
+  .SectionCarrusel-Contenedor2::-webkit-scrollbar {
+    display: none;
+  }
+
+  .SectionCarrusel-Contenedor2{
+    width: 1145px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 550px;
+    margin-left: 7%;
+    overflow: hidden;
+  }
+
+  .SectionCarrusel-Contenedor2::-webkit-scrollbar {
+    display: none;
   }
 
   .SectionCarrusel-Contenedor{
@@ -284,7 +353,21 @@ header{
     scroll-behavior: smooth;
     height: 550px;
     margin-left: 7%;
+    overflow: hidden;
+  }
 
+  .SectionCarrusel-Contenedor::-webkit-scrollbar {
+    display: none;
+  }
+
+  .SectionCarrusel-Contenedor{
+    width: 1145px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 550px;
+    margin-left: 7%;
+    overflow: hidden;
   }
 
   .SectionCarrusel-Contenedor::-webkit-scrollbar {
@@ -292,6 +375,18 @@ header{
   }
 
   .CartaCarrusel{
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin:18.5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+
+  .CartaCarrusel2{
     flex: 0 0 auto;
     width: 250px;
     height: 450px;
@@ -313,9 +408,10 @@ header{
     border-radius: 5% 5% 0% 0%;
   }
 
-  .product-thumb {
-    width: 60%;
+  .movie-thumb {
+    width: 70%;
     object-fit:unset;
+    height: 80%;
   }
 
   .discount-tag {
@@ -351,6 +447,12 @@ header{
     align-items: center;
   }
 
+
+  .BotonesCarrusel2{
+    justify-content: center;
+    align-items: center;
+  }
+
   .product-card:hover .card-btn {
     opacity: 1;
   }
@@ -360,7 +462,7 @@ header{
     color: #fff;
   }
 
-  .SectionCarrusel-informacion{
+  .SectionCarrusel-informacion2{
     width: 100%;
     height: 100px;
     margin-top: -10%;
@@ -383,12 +485,12 @@ header{
     margin: 5px 0;
   }*/
 
-  .price {
+  .title{
     font-weight: 900;
     font-size: 20px;
     text-align: center;
     margin-left: -8px;
-    color: red;
+    color: var(--blanco);
   }
 
   .title-carro{
@@ -403,6 +505,24 @@ header{
 
   .pre-btn,
   .nxt-btn {
+    border: none;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 100%;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  }
+
+  .pre-btn2,
+  .nxt-btn2 {
     border: none;
     width: 60px;
     height: 60px;
@@ -440,6 +560,26 @@ header{
     opacity: 1;
   }
 
+  .pre-btn2 {
+    /*left: 5%;*/
+    transform: rotate(180deg);
+    font-size: 4rem;
+  }
+
+  .nxt-btn2 {
+    right: 6%;
+    font-size: 4rem;
+  }
+
+  .pre-btn2 img,
+  .nxt-btn2 img {
+    opacity: 0.2;
+  }
+
+  .pre-btn2:hover img,
+  .nxt-btn2:hover img {
+    opacity: 1;
+  }
   .collection-container {
     width: 100%;
     display: grid;
@@ -482,7 +622,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 50rem;
+    top: -20rem;
   }
   .slide-content{
     margin: 0 40px;
@@ -612,6 +752,10 @@ header{
     .swiper-button-next, .swiper-button-prev {
       display: none;
     }
+
+    .slide-container{
+        margin-top: 2rem;
+    }
   }
 
 footer{
@@ -623,7 +767,7 @@ footer{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 50rem;
+    margin-top: -30rem;
 }
 
 footer .container{
@@ -762,9 +906,13 @@ footer p{
 }
 
 /* Responsive */
+
+
+
 @media screen and (max-width: 991px){
   footer{
     padding: 40px;
+    margin-top: -28rem;
   }
 
   footer .container{
@@ -785,9 +933,24 @@ footer p{
 }
 }
 
-@media screen and (max-width: 900px) {
 
 
+@media screen and (max-width: 1689px) {
+.ofertas{
+    margin-top: 55rem;
+}
+
+.SectionCarrusel{
+    margin-top: 1rem;
+}
+
+.ofertas2{
+    margin-top: 2rem;
+}
+
+.SectionCarrusel2{
+    margin-top: 1rem;
+}
 
  .navbar{
     padding: 0;
@@ -857,6 +1020,9 @@ footer p{
     margin: 25px 0;
     font-size: 1.5em;
 }
+
+
+
 }
 
 

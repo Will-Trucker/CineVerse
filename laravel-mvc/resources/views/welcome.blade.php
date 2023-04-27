@@ -107,12 +107,19 @@
   </header>
     </main>
 
+
+
+    <section class="ofertas">
+        <h1>CARTELERA</h1>
+        <hr>
+
+
+    </section>
    <!-- Carrusel -->
-   <section class="ofertas">
-    <h1>CARTELERA</h1>
-    <hr>
-</section>
 <section class="SectionCarrusel">
+
+</center>
+    <br>
   <div class="BotonesCarrusel">
         <button class="pre-btn"><img src="images/arrow.png" alt="">></button>
         <button class="nxt-btn"><img src="images/arrow.png" alt="">></button>
@@ -125,7 +132,7 @@
                 </div>
                 <div class="SectionCarrusel-informacion">
 
-                    <h3 class="CarruselTitulo">  <a href="{{route('register')}}">Ir</a></h3>
+                    <!-- <h3 class="CarruselTitulo">  <a href="">Ir</a></h3> -->
                     <span class="title">Avatar - El Camino del Agua</span>
 
                 </div>
@@ -133,47 +140,163 @@
             <div class="CartaCarrusel">
                 <div class="CartaImagen">
 
-                    <img src="" class="movie-thumb" alt="">
+                    <img src="https://mx.web.img2.acsta.net/pictures/22/11/30/02/01/5931433.jpg" class="movie-thumb" alt="">
                 </div>
                 <div class="SectionCarrusel-informacion">
-                    <h3 class="CarruselTitulo">Intel Core i5-12600K</h3>
-                    <span class="price">$215.74</span>
+                  <!--  <h3 class="CarruselTitulo"> <a href="">Ir</a></h3> -->
+                    <span class="title"> Mi Suegra me Odia</span>
                 </div>
             </div>
             <div class="CartaCarrusel">
                 <div class="CartaImagen">
 
-                    <img src="https://i0.wp.com/dealtargets.com/wp-content/uploads/2022/01/61nVSWwdfqL._AC_SL1500_.jpg?fit=1500%2C877&ssl=1" class="product-thumb" alt="">
+                    <img src="https://www.multicinema.com.sv/peliculas/MARAVILLOSO-DESASTRE-3.gif" class="movie-thumb" alt="">
                 </div>
                 <div class="SectionCarrusel-informacion">
-                    <h3 class="CarruselTitulo">Kingston Fury Beast</h2>
-                    <span class="price">$254.00</span>
+                 <!--   <h3 class="CarruselTitulo"><a href="">Ir</a></h2> -->
+                    <span class="title">Maravilloso Desastre</span>
                 </div>
             </div>
             <div class="CartaCarrusel">
                 <div class="CartaImagen">
 
-                    <img src="https://m.media-amazon.com/images/I/91H4pNDrHJL._AC_SL1500_.jpg" class="product-thumb" alt="">
+                    <img src="https://es.web.img3.acsta.net/pictures/23/01/23/16/41/0617610.jpg" class="movie-thumb" alt="">
                 </div>
                 <div class="SectionCarrusel-informacion">
-                    <h3 class="title-carro">Corsair Dominator Platinium RGB DDR4</h3>
-                    <span class="price">$339.99</span>
+                   <!-- <h3 class="CarruselTitulo"><a href="">Ir</a></h3> -->
+                    <span class="title">Posesion Infernal: El Desastre</span>
                 </div>
             </div>
             <div class="CartaCarrusel">
                 <div class="CartaImagen">
 
-                    <img src="https://cdn.cs.1worldsync.com/syndication/feeds/wd/inline-content/C4/2244F7EA61586C5A4BC96484A8EF88D466977ECE_MYPASSPORT4TB5TBBLACKHERO_w_400_hero.png" class="product-thumb" alt="">
+                    <img src="https://static.cinepolis.com/img/peliculas/41904/1/1/41904.jpg" class="movie-thumb" alt="">
                 </div>
                 <div class="SectionCarrusel-informacion">
-                    <h3 class="CarruselTitulo">WD My Passport - Disco Duro Portátil, 5TB</h3>
-                    <span class="price">$61.99</span>
+                  <!--  <h3 class="CarruselTitulo"><a href="">Ir</a></h3> -->
+                    <span class="title">John Wick 4</span>
                 </div>
             </div>
+            <div class="CartaCarrusel">
+                <div class="CartaImagen">
 
+                    <img src="https://th.bing.com/th/id/OIP.4PzIYDcGhrSYjSx4SLIJFgHaLs?pid=ImgDet&rs=1" class="movie-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion">
+                 <!--   <h3 class="CarruselTitulo"><a href="">Ir</a></h3> -->
+                    <span class="title">Super Mario Bros - La pelicula</span>
+                </div>
+            </div>
             </div>
         </div>
     </section>
+
+
+    <section class="ofertas2">
+        <h1>ESTRENOS</h1>
+        <hr>
+
+
+    </section>
+   <!-- Carrusel -->
+<section class="SectionCarrusel2">
+
+</center>
+    <br>
+  <div class="BotonesCarrusel2">
+        <button class="pre-btn2"><img src="images/arrow.png" alt="">></button>
+        <button class="nxt-btn2"><img src="images/arrow.png" alt="">></button>
+  </div>
+        <div class="SectionCarrusel-Contenedor2">
+            <div class="CartaCarrusel2">
+                <div class="CartaImagen">
+
+                    <img src="https://www.multicinema.com.sv/peliculas/rapidos-y-furiosos-10.gif" class="movie-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion2">
+
+                    <!-- <h3 class="CarruselTitulo">  <a href="">Ir</a></h3> -->
+                    <span class="title">Rapidos y Furiosos X</span>
+
+                </div>
+            </div>
+            <div class="CartaCarrusel2">
+                <div class="CartaImagen">
+
+                    <img src="https://www.multicinema.com.sv/peliculas/guardianes-de-la-galaxia-4.jpg" class="movie-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion2">
+                  <!--  <h3 class="CarruselTitulo"> <a href="">Ir</a></h3> -->
+                    <span class="title">Guardianes de la Galaxia Vol. 3</span>
+                </div>
+            </div>
+            <div class="CartaCarrusel2">
+                <div class="CartaImagen">
+
+                    <img src="https://cinemarkmedia.modyocdn.com/ca/300x400/93033.jpg?version=1682571600000" class="movie-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion2">
+                 <!--   <h3 class="CarruselTitulo"><a href="">Ir</a></h2> -->
+                    <span class="title">Oso Intoxicado</span>
+                </div>
+            </div>
+            <div class="CartaCarrusel2">
+                <div class="CartaImagen">
+
+                    <img src="https://www.multicinema.com.sv/peliculas/INDIANA-JONES-1.jpg" class="movie-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion2">
+                   <!-- <h3 class="CarruselTitulo"><a href="">Ir</a></h3> -->
+                    <span class="title">Indiana Jones y el dia del destino</span>
+                </div>
+            </div>
+            <div class="CartaCarrusel2">
+                <div class="CartaImagen">
+
+                    <img src="https://www.multicinema.com.sv/peliculas/la-segunda-enmienda-3.jpg" class="movie-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion2">
+                  <!--  <h3 class="CarruselTitulo"><a href="">Ir</a></h3> -->
+                    <span class="title">La Segunda Enmienda 3</span>
+                </div>
+            </div>
+            <div class="CartaCarrusel2">
+                <div class="CartaImagen">
+
+                    <img src="https://www.multicinema.com.sv/peliculas/MISION-IMPOSIBLE-1-1.gif" class="movie-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion2">
+                 <!--   <h3 class="CarruselTitulo"><a href="">Ir</a></h3> -->
+                    <span class="title">Mision Imposible - Sentencia Mortal Part. I</span>
+                </div>
+            </div>
+
+            <div class="CartaCarrusel2">
+                <div class="CartaImagen">
+
+                    <img src="https://www.multicinema.com.sv/peliculas/spider-man-a-traves-del-spider-verso-1.gif" class="movie-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion2">
+                 <!--   <h3 class="CarruselTitulo"><a href="">Ir</a></h3> -->
+                    <span class="title">Spider-Man A través del spiderverso</span>
+                </div>
+            </div>
+
+            <div class="CartaCarrusel">
+                <div class="CartaImagen2">
+
+                    <img src="https://www.multicinema.com.sv/peliculas/THE-MARVELS-1.gif" class="movie-thumb" alt="">
+                </div>
+                <div class="SectionCarrusel-informacion2">
+                 <!--   <h3 class="CarruselTitulo"><a href="">Ir</a></h3> -->
+                 <br><br>
+                    <span class="title">Las Marvels - La pelicula</span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
 
     <script src="{{asset('js/Carrousel.js')}}"></script>
 
