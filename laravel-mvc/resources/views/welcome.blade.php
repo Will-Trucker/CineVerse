@@ -281,18 +281,6 @@
                     <span class="title">Spider-Man A través del spiderverso</span>
                 </div>
             </div>
-
-            <div class="CartaCarrusel">
-                <div class="CartaImagen2">
-
-                    <img src="https://www.multicinema.com.sv/peliculas/THE-MARVELS-1.gif" class="movie-thumb" alt="">
-                </div>
-                <div class="SectionCarrusel-informacion2">
-                 <!--   <h3 class="CarruselTitulo"><a href="">Ir</a></h3> -->
-                 <br><br>
-                    <span class="title">Las Marvels - La pelicula</span>
-                </div>
-            </div>
             </div>
         </div>
     </section>
@@ -439,7 +427,7 @@
         <div class="sec quick-links">
             <h2>Enlaces Utiles</h2>
             <ul>
-                <li><a href="#">Conócenos</a></li>
+                <li><a href="{{url('conocenos')}}">Conócenos</a></li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Terminos y Condiciones</a></li>
             </ul>

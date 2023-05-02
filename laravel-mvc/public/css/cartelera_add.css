@@ -1,3 +1,17 @@
+:root{
+    --dorado1--: rgb(96, 53, 18);
+    --dorado2--: rgb(200, 150, 41);
+    --dorado3--: rgb(250, 242, 144);
+    --negromate--: #0000;
+    --negro1--: #020403;
+    --negro2--: #212121;
+    --complemento--: #D3d3d3;
+    --blanco: #ffff;
+    --rojo: red;
+    --transparente-gris: rgba(255,255,255, 0.20);
+    --fuente: 'Poppins', sans-serif;
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -6,7 +20,7 @@
 }
 
 body{
-    background: linear-gradient(rgba(5,7,12, 0.75), rgba(5,7,12, 0.75)), url("../img/add-p.png");
+    background: linear-gradient(rgba(5,7,12, 0.75), rgba(5,7,12, 0.75)), url("../img/fondo-index.jpeg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,13 +37,13 @@ body{
 	border-radius: 13%;
     padding: 30px;
     margin: auto;
-    margin-top: 6.4%;
+    margin-top: 5%;
     border-radius: 10px;
     font-family: var(--font);
     color: white;
 
 
-	box-shadow: 0 0 5px        #f7040e    , 0 0 30px         #f7040e     , 0 0 50px     #f7040e    ;
+	box-shadow: 0 0 5px        var(--dorado3--)    , 0 0 30px         var(--dorado3--)     , 0 0 50px     var(--dorado3--)    ;
 
 }
 
@@ -39,7 +53,7 @@ body{
 	padding: 10px;
 	border-radius: 4px;
 	margin-bottom: 16px;
-	border: 1px solid   #d80405  ;
+	border: 1px solid   var(--dorado3--)  ;
 	font-family: 'poppins';
 	font-size: 18px;
 	color: white;
@@ -56,7 +70,7 @@ input[type="number"]{
     padding: 10px;
     border: none;
     border-width: 0.3rem;
-    border-bottom: #f7040e solid;
+    border-bottom: var(--dorado3--) solid;
     background-color: #000;
     color: white;
 }
@@ -66,7 +80,7 @@ input:focus{
 }
 
 .form-register a{
-	color:  #f7040e ;
+	color:  var(--dorado3--) ;
 	text-decoration: none;
 
 }
@@ -99,7 +113,7 @@ button{
 
 .btn-neon:hover{
     background: #000000;
-    box-shadow: 0 0 3px  #d80405 , 0 0 30px  #d80405 , 0 0 40px  #d80405 ;
+    box-shadow: 0 0 3px  var(--dorado3--) , 0 0 30px  var(--dorado3--) , 0 0 40px  var(--dorado3--);
     transition-delay: 1s;
  }
 .btn-neon span{
@@ -111,7 +125,7 @@ button{
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent,  #d80405);
+    background: linear-gradient(90deg, transparent,  var(--dorado3--));
  }
  .btn-neon:hover #span1{
     left: 100%;
@@ -122,7 +136,7 @@ button{
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent  #d80405 );
+    background: linear-gradient(270deg, transparent  var(--dorado3--) );
 }
  .btn-neon:hover #span3{
     right: 100%;
@@ -134,7 +148,7 @@ button{
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg,transparent, #d80405);
+    background: linear-gradient(180deg,transparent, var(--dorado3--));
 }
 .btn-neon:hover #span2{
     top: 100%;
@@ -146,7 +160,7 @@ button{
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg,transparent, #d80405);
+    background: linear-gradient(360deg,transparent, var(--dorado3--));
 }
 .btn-neon:hover #span4{
     bottom: 100%;
@@ -162,7 +176,7 @@ button{
 .formulario__campo {
 border: none;
 border-width: 0.3rem;
-border-bottom: #f7040e solid;
+border-bottom: var(--dorado3--) solid;
 background-color: #000;
 color: gray;
 background-color: black;
@@ -177,7 +191,7 @@ width: 100%;
 .formulario__proveedor{
     border: none;
     border-width: 0.3rem;
-    border-bottom: #f7040e solid;
+    border-bottom: var(--dorado3--) solid;
     background-color: #000;
     color: gray;
     background-color: black;
@@ -195,16 +209,16 @@ option{
 
 
 /* boton archivos */
-.archivo input{
+.imagen input{
     display: none;
 }
 
-.archivo label{
+.imagen label{
     display: block;
     padding: 12px 10px;
     border: none;
     border-radius: 6px;
-    background-color:  #f7040e ;
+    background-color:var(--dorado2--);
     cursor: pointer;
     width: 50%;
     margin-top: 2%;
@@ -212,12 +226,47 @@ option{
     color: white;
 }
 
+#nombre-a{
+    text-align: center;
+    font-size: 0.9rem;
+    width: -10rem;
+}
 
-
-.archivo i{
+.imagen i{
     font-size: 1.2rem;
     margin-right: 7%;
-    color: black;
+    color: rgb(255, 251, 251);
+}
+
+.trailers input{
+    display: none;
+}
+
+.trailers label{
+    display: block;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 6px;
+    background-color:var(--dorado2--);
+    cursor: pointer;
+    width: 50%;
+    margin-top: 5%;
+    font-size: 1rem;
+    color: white;
+}
+
+
+
+.trailers i{
+    font-size: 1.2rem;
+    margin-right: 7%;
+    color: rgb(255, 255, 255);
+}
+
+#nombre-v{
+    font-size: 0.9rem;
+    text-align: center;
+    width: -10rem;
 }
 
 option{

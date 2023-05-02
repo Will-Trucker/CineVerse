@@ -7,136 +7,86 @@
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <title>Agregar Cartelera</title>
+    <title>| Agregar Cartelera</title>
+    <link rel="icon" href="{{asset('img/Favicon.png')}}">
+    <link rel="preload" href="{{asset('css/cartelera_add.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('css/cartelera_add.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('css/normalize.css')}}" type="text/css">
+    <link rel="preload" href="{{asset('css/normalize.css')}}" type="text/css">
 </head>
 <body>
     <center>
         <br>
-
-        <form action="EnvioCartelera" method="post" class="form-register" enctype="multipart/form-data">
+        <form action="Enviarmovie" method="post" class="form-register" enctype="multipart/form-data">
             @csrf
-                <img src="{{asset('img/Logo.jpeg')}}" width="350px" height="145px" class="logo">
-                <br>
-                <h2 class="title-form">AGREGAR CARTELERA</h2>
-                <input class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre" value="{{ old('nombre') }}">
-                @error('nombre')
-                <br>
-                  <span role="alert" style="color: white;">
-                    <strong>
-                    {{ $message }}
-                    </strong>
-                  </span>
-                @enderror
-                <br>
-                <select name="genero" id="genero" class="formulario__campo controls" value="{{old('genero')}}">
-                <option disabled selected>GÉNERO</option>
-
-                <option value="ACCION">ACCION</option>
-                <option value="COMEDIA">COMEDIA</option>
-                <option value="MIEDO">MIEDO</option>
-                <option value="ANIMADA">ANIMADA</option>
-                <option value="DRAMA">DRAMA</option>
-                <option value="CIENCIA-FICCION">CIENCIA-FICCION</option>
-                </select>
-                @error('genero')
-                <br>
-                  <span role="alert" style="color: white;">
-                    <strong>
-                    {{ $message }}
-                    </strong>
-                  </span>
-                @enderror
-                <br>
-                <input class="controls" type="date" name="dia" id="dia" placeholder="Dia" min="2023-04-25" max="2023-05-12">
-                @error('dia')
-                <br>
-                  <span role="alert" style="color: white;">
-                    <strong>
-                    {{ $message }}
-                    </strong>
-                  </span>
-                @enderror
+            <img src="{{asset('img/Logo1.webp')}}" width="350px" height="145px" class="logo">
+            <br>
+            <h2 class="title-form">CARTELERA</h2>
+                <input class="controls" id="nombre" type="text" name="nombre" value="{{ old('nombre') }}" placeholder="Nombre" required autofocus>
+                  <br>
+                <input type="number" name="asientos" id="asientos"  min="1" max="48" placeholder="Cantidad de Asientos" required autofocus>
+                <input class="controls" id="dia" type="date" name="dia" value="{{ old('dia') }}" placeholder="dia" required autofocus>
                <br>
-                <input class="controls" type="time" name="horario" id="horario" placeholder="Funcion" min="08:00" max="20:00" value="{{old('horario')}}">
-                @error('horario')
+               <input type="time" id="hora" name="hora"  value="08:00" min="08:00" max="00:00" required value="{{old('hora')}}" autofocus class="controls">
+               <br>
+               <select name="sala" id="sala" value="{{old('sala')}}" class="formularios__campos controls">
+               <option value="SALA 1">SALA 1</option>
+               <option value="SALA 2">SALA 2</option>
+               <option value="SALA 3">SALA 3</option>
+               <option value="SALA 4">SALA 4</option>
+               <option value="SALA 5">SALA 5</option>
+               </select>
+               <select name="clasificacion" name="clasificacion" id="clasificacion"  value="{{old('clasificacion')}}" class="formularios__campos controls">
+               <option value="CLASIFICACION" disabled selected>CLASIFICACION</option>
+               <option value="A">A</option>
+               <option value="AA">AA</option>
+               <option value="B">B</option>
+               <option value="C">C</option>
+               </select>
+               <br>
+               <select name="genero" name="genero" id="genero" value="{{old('genero')}}" class="formulario__campos controls">
+               <option value="GENERO" disabled selected>GENERO</option>
+               <option value="ACCION">ACCION</option>
+               <option value="COMEDIA">COMEDIA</option>
+               <option value="CIENCIA-FICCION">CIENCIA-FICCION</option>
+               <option value="MIEDO">MIEDO</option>
+               <option value="FAMILIAR">FAMILIAR</option>
+               </select>
+               <br>
+                <textarea class="formulario__campo controls" id="sinopsis" name="sinopsis" required {{ old('sinopsis') }} placeholder="Sinopsis"></textarea>
                 <br>
-                <span role="alert" style="color: white;">
-                <strong>  {{ $message }} </strong>
-
-                </span>
-                @enderror
+                <div class="imagen">
+                    <label for="imagen"><i class="fa-solid fa-file-image"></i>Agregar imagen</label>
+                    <input id="imagen" type="file" name="imagen" required accept=".png,.jpg,.jpeg" class="controls">
+                    <br>
+                    <h4 id="nombre-a"></h4>
+                    <script src="{{asset('js/agregar.js')}}"></script>
+                </div>
                 <br>
-                <select name="formato" id="formato" class="formulario__campo controls" value="{{old('formato')}}">
-                <option disabled selected>FORMATO</option>
-
-                <option value="DOB">DOB</option>
-                <option value="3D">3D</option>
-                </select>
-                @error('formato')
-                <br>
-                  <span role="alert" style="color: white;">
-                    <strong>
-                    {{ $message }}
-                    </strong>
-                  </span>
-                @enderror
-                <br>
-                <select name="sala" id="sala" class="formulario__campo controls" value="{{old('sala')}}">
-                    <option disabled selected > SALA </option> <br>
-
-                    <option value="Sala1">Sala1</option>
-                    <option value="Sala2">Sala2</option>
-                    <option value="Sala3">Sala3</option>
-                    <option value="Sala4">Sala4</option>
-                    <option value="Sala5">Sala5</option>
-                </select>
-                @error('sala')
-                <br>
-                <span role="alert" style="color: white;">
-                  <strong>
-                  {{ $message }}
-                  </strong>
-                </span>
-                @enderror
-                <br>
-                <textarea class="controls" name="sinopsis" id="sinopsis" cols="30" rows="10" value="{{old('sinopsis')}}" placeholder="sinopsis"></textarea>
-                @error('sinopsis')
-                <br>
-                  <span role="alert" style="color: white;">
-                    <strong>
-                    {{ $message }}
-                    </strong>
-                  </span>
-                @enderror
-                <br>
-                <div class="archivo">
-                <label for="archivo"><i class="fa-solid fa-file-image"></i> Agregar Imagen</label>
-                <input type="file" id="archivo" name="archivo" value="{{old('archivo')}}">
-                @error('archivo')
-                <br>
-                <span role="alert" style="color: white;">
-                <strong>  {{ $message }} </strong>
-                </span>
-                @enderror
-                <br>
-                <h4 id="nombre-a"></h4>
-                <script src="{{asset('js/agregar.js')}}" type="text/javascript"></script>
-            </div>
-             <br>
+                <div class="trailers">
+                    <label for="trailer"><i class="fa-solid fa-file-video"></i>Agregar video</label>
+                    <input id="trailer" type="file" name="trailer" required accept=".mp4" class="controls">
+                    <br>
+                    <h4 id="nombre-v"></h4>
+                    <script src="{{asset('js/video.js')}}"></script>
+                </div>
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
                 <button class="btn-neon" type="submit">
-
                     <span id="span1"></span>
                     <span id="span2"></span>
                     <span id="span3"></span>
                     <span id="span4"></span>
-                    Agregar
-
+                    Registrar
             </button>
-
-
-            </form>
         </center>
+        <br>
 </body>
 </html>
